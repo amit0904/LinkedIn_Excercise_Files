@@ -97,9 +97,10 @@ function mouseDragAction(){
         
     };
 
-DIGITALHIDE.addEventListener("mouseover", mouseDragAction);
+DIGITALHIDE.addEventListener("mouseover", mouseDragAction, false);
 
 window.addEventListener("close", popUp, false);
+
 
 function popUp() {
 

@@ -9,3 +9,14 @@ console.log(document.querySelector('.feature a')); // just brings the a tag from
 
 // length is a property of arrays in JavaScript that returns or sets the number of elements in a given array.
 
+var extLinks = document.querySelectorAll('a[href^="http"]');
+console.log(extLinks);  
+
+
+for (var i = 0; i < extLinks.length; i++) {
+console.log(extLinks[i]);
+extLinks[i].setAttribute("target","_blank") ;
+if (i ==2 ) {
+    break;
+}
+}
