@@ -9,6 +9,7 @@ console.log(ALERT);
 
 function reveal(e,current) {
     e.preventDefault();
+    debugger;
     console.log(current);
     current.innerHTML == "Book Now!" ? current.innerHTML = "Oooops !" : current.innerHTML = "Book Now!"
     //CTA.classList.toggle("hide");
@@ -18,5 +19,8 @@ function reveal(e,current) {
     console.log(ALERT);
 }
 
-CTA.addEventListener('click', function(e){reveal(e,this);}, false);
+CTA.addEventListener('click', wrapperFunc, false);
 //CTA.addEventListener('click', function(){console.log("The button was clicked!")}, false);
+function wrapperFunc(e){
+    reveal(e,this);
+}
